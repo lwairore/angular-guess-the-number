@@ -37,6 +37,10 @@ export class AppComponent {
   original: number;
   guess: number;
 
+  constructor() {
+    this.initializeGame();
+  }
+
 
 
 }
