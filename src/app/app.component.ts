@@ -32,6 +32,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  deviation: number;
+  noOfTries: number;
+  original: number;
+  guess: number;
+
 
 
 }
