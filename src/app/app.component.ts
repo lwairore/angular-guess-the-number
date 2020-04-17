@@ -48,7 +48,7 @@ export class AppComponent {
     this.deviation = null;
   }
 
-  verifyGues = () => {
+  verifyGuess = () => {
     this.deviation = this.original - this.guess;
     this.noOfTries = this.noOfTries + 1;
   }
