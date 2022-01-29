@@ -20,3 +20,6 @@ This is how the game looks:
     1. The game tells the player they are wrong and whether their guess was too high or too low.
     3. The game allows them to enter another guess.
     4. Game increments the trials number by 1.
+
+# Built with
+- [Angular](https://angular.io/)
