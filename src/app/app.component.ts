@@ -34,7 +34,7 @@ export class AppComponent {
   noOfTries: number;
   original: number;
   guess: number;
-  guessedNumbers = null;
+  guessedNumbers = '';
 
   constructor() {
     this.initializeGame();
@@ -45,7 +45,7 @@ export class AppComponent {
     this.original = Math.floor((Math.random() * 1000) + 1);
     this.guess = null;
     this.deviation = null;
-    this.guessedNumbers = null;
+    this.guessedNumbers = '';
   }
 
   verifyGuess = () => {
