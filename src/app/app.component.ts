@@ -49,6 +49,7 @@ export class AppComponent {
   verifyGuess = () => {
     this.deviation = this.original - this.guess;
     this.noOfTries = this.noOfTries + 1;
+    this.guessedNumbers = `${this.guessedNumbers}, ${this.guess}`;
   }
 
 }
