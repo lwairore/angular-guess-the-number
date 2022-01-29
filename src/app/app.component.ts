@@ -4,27 +4,22 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
    <div class="container">
-    <h2>Guess the Number !</h2>
-    <div class="card bg-light mb-3">
-        <div class="card-body">
-          <p class="card-text">Guess the computer generated random number between 1 and 1000.</p>
-        </div>
-    </div>
+    <h3>I am Thinking of a number Between 1-1000.</h3>
+    <h3>Can you Guess it </h3>
+    <input type="number" [value]="guess" (input)="guess = $event.target.value" />
+
+    <button (click)="verifyGuess()">GUESS</button>
+    <button (click)="initializeGame()">Restart</button>
+
     <div>
-      <label>Your Guess: </label>
-      <input type="number" [value]="guess" (input)="guess = $event.target.value" />
-      <button (click)="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
-      <button (click)="initializeGame()" class="btn btn-warning btn-sm">Restart</button>
+        <p *ngIf="deviation<0" class="alert alert-warning">Your guess is higher.</p>
+        <p *ngIf="deviation>0" class="alert alert-warning">Your guess is lower.</p>
+        <p *ngIf="deviation===0" class="alert alert-success">Yes! That's it.</p>
     </div>
-    <div>
-      <p *ngIf="deviation<0" class="alert alert-warning">Your guess is higher.</p>
-      <p *ngIf="deviation>0" class="alert alert-warning">Your guess is lower.</p>
-      <p *ngIf="deviation===0" class="alert alert-success">Yes! That's it.</p>
-    </div>
-    <p class="text-info">No of guesses :
-      <span class="badge">{{noOfTries}}</span>
-    </p>
-  </div>
+
+    <p>No. of Guesss : {{noOfTries}}</p>
+    <p>Guessed number are : none</p>
+</div>
   `,
   styleUrls: ['./app.component.css']
 })
