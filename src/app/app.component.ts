@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
     <p class="text-info">No of guesses :
       <span class="badge">{{noOfTries}}</span>
     </p>
-    <p class="text-info">Guessed numbers : {{ guessedNumbers ? 'None': guessedNumbers }} </p>
+    <p class="text-info">Guessed numbers : {{ guessedNumbers ? guessedNumbers :'None'  }} </p>
   </div>
   `,
   styleUrls: ['./app.component.css']
