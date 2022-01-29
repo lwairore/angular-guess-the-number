@@ -33,6 +33,7 @@ export class AppComponent {
   noOfTries: number;
   original: number;
   guess: number;
+  guessedNumbers = '';
 
   constructor() {
     this.initializeGame();
