@@ -44,6 +44,7 @@ export class AppComponent {
     this.original = Math.floor((Math.random() * 1000) + 1);
     this.guess = null;
     this.deviation = null;
+    this.guessedNumbers = '';
   }
 
   verifyGuess = () => {
